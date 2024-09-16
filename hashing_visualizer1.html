@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashing Visualizer</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="hashing_visualizer1.js" defer></script>
+    <style>
+        .flowchart {
+            text-align: center;
+            margin: 20px auto;
+            font-family: monospace;
+            width: fit-content;
+        }
+        .flowchart p {
+            margin: 0;
+        }
+        .flowchart .step {
+            margin-bottom: 10px;
+        }
+        .flowchart .arrow {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index1.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+            <button class="dropbtn">Tools</button>
+            <div class="dropdown-content">
+                <a href="password_checker1.html">Password Checker</a>
+                <a href="encryption_visualizer1.html">Encryption Visualizer</a>
+                <a href="hashing_visualizer1.html">Hashing Visualizer</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Hashing Visualizer</h1>
+        <p><strong>What is Hashing?</strong></p>
+        <p>Hashing is a process of converting input data into a fixed-size string of characters, which is typically a hash code. It is used for data integrity verification and password storage.</p>
+
+        <h2>Examples of Hashing</h2>
+        <ul>
+            <li><strong>MD5 Hashing:</strong> Produces a 128-bit hash value, often rendered as a 32-character hexadecimal number.</li>
+            <li><strong>SHA-256 Hashing:</strong> Produces a 256-bit hash value, often rendered as a 64-character hexadecimal number.</li>
+        </ul>
+        
+        <div class="flowchart">
+            <h2>Hashing Flowchart</h2>
+            <div class="step">1. Input Plain Text</div>
+            <div class="arrow">↓</div>
+            <div class="step">2. Select Hashing Algorithm</div>
+            <div class="arrow">↓</div>
+            <div class="step">3. Apply Algorithm</div>
+            <div class="arrow">↓</div>
+            <div class="step">4. Generate Hash Code</div>
+        </div>
+
+        <h2>Hashing Tool</h2>
+        <label for="text">Plain Text:</label>
+        <input type="text" id="text">
+        <label for="algorithm">Algorithm:</label>
+        <select id="algorithm">
+            <option value="md5">MD5</option>
+            <option value="sha256">SHA-256</option>
+        </select>
+        <button onclick="hash()">Hash</button></br>
+    </br>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

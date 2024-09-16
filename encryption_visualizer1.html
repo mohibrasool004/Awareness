@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Visualizer</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="encryption_visualizer1.js" defer></script>
+    <style>
+        .flowchart {
+            text-align: center;
+            margin: 20px auto;
+            font-family: monospace;
+            width: fit-content;
+        }
+        .flowchart p {
+            margin: 0;
+        }
+        .flowchart .step {
+            margin-bottom: 10px;
+        }
+        .flowchart .arrow {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index1.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+            <button class="dropbtn">Tools</button>
+            <div class="dropdown-content">
+                <a href="password_checker1.html">Password Checker</a>
+                <a href="encryption_visualizer1.html">Encryption Visualizer</a>
+                <a href="hashing_visualizer1.html">Hashing Visualizer</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Encryption Visualizer</h1>
+        <p><strong>What is Encryption?</strong></p>
+        <p>Encryption is a process of converting plain text into a coded format to prevent unauthorized access. It is used to protect sensitive data during transmission or storage.</p>
+
+        <h2>Examples of Encryption</h2>
+        <ul>
+            <li><strong>AES Encryption:</strong> Encrypts data using a symmetric key algorithm.</li>
+            <li><strong>RSA Encryption:</strong> Uses a pair of keys, one for encryption and one for decryption.</li>
+        </ul>
+        
+        <div class="flowchart">
+            <h2>Encryption Flowchart</h2>
+            <div class="step">1. Input Plain Text</div>
+            <div class="arrow">↓</div>
+            <div class="step">2. Select Encryption Algorithm</div>
+            <div class="arrow">↓</div>
+            <div class="step">3. Apply Key</div>
+            <div class="arrow">↓</div>
+            <div class="step">4. Generate Encrypted Text</div>
+        </div>
+
+        <h2>Encryption Tool</h2>
+        <label for="text">Plain Text:</label>
+        <input type="text" id="text">
+        <label for="key">Key:</label>
+        <input type="text" id="key">
+        <label for="algorithm">Algorithm:</label>
+        <select id="algorithm">
+            <option value="aes">AES</option>
+            <option value="des">DES</option>
+            <option value="rsa">RSA</option>
+        </select>
+        <button onclick="encrypt()">Encrypt</button></br>
+    </br>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
